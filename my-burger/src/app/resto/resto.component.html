@@ -1,0 +1,30 @@
+<div class="container"> 
+    <ul>
+        <li><img src="../images/burguer_simple.jpg" alt=""><a >Hamburguesa simple -s/10.00</a></li>
+        <li><img src="../images/cafe-con-leche.jpg" alt=""><a >Hamburguesa doble -s/15.00</a></li>
+        <li><img src="../images/sandwich-jamon-queso.jpg" alt=""><a >Papas fritas-s/5.00</a></li>
+    </ul>
+    <ul>
+        <li><a >Agua 500 ml-S/5.00</a></li>
+        <li><a >Agua 750 ml-S/7.00</a></li>
+        <li><a >Gaseosa 750 ml-S/7.00</a></li>
+        <li><a >Gaseosa 500 ml-S/10.00</a></li>
+    </ul>      
+ </div>
+ <!-- esto es prueba -->
+ <h1>Contact us</h1>
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+    <label>
+      Nombre del Cliente:
+      <input placeholder="escribe aqui ..." type="text" formControlName="name">
+        <div *ngIf=" submitted && messageForm.controls.name.required">Es necesario un nombre</div>  
+    </label>
+    <input type="submit" value="Send message" class="cta">
+
+</form>
+
+  <div *ngIf="submitted" class="results">
+    <strong>Name:</strong> 
+    <span>{{ messageForm.controls.name.value }}</span>
+  </div>

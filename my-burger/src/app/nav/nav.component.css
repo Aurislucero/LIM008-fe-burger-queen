@@ -1,5 +1,5 @@
 header {
-    background: #7700FF;
+    background: rgba(153, 157, 150, 0.3);
   }
   header .logo {
     font-weight: bold;
@@ -11,9 +11,11 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    color: #000000;
   }
   header nav ul li {
     float: left;
+    
   }
   header nav ul li a {
     padding: 1.5em;
@@ -21,5 +23,9 @@ header {
     font-size: 0.8em;
   }
   header nav ul li a:hover {
-    background: #8E2BFF;
+    background: #C2A924;
+border: 1px solid #333333;
+box-sizing: border-box;
+border-radius: 10px;
+color: #000000;
   }
