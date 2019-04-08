@@ -1,11 +1,11 @@
 {
- "desayuno":{
+ "desayuno":[{
    "cafeAmericano" :5,
     "cafeConLeche":7,
     "jugoDeFrutasNatural":7,
     "sandwichDeJamonYqueso":10 
- },
- "resto":{
+ }],
+ "resto":[{
    "arosDecebolla":5,
    "HambureguesasDoble" :{
     "res":15,
@@ -24,5 +24,5 @@
     "bebidaGaseosa750ml": 10,
     "huevo":1,
     "queso":1
- }
+ }]
 }
