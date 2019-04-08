@@ -1,0 +1,28 @@
+{
+ "desayuno":[{
+   "cafeAmericano" :5,
+    "cafeConLeche":7,
+    "jugoDeFrutasNatural":7,
+    "sandwichDeJamonYqueso":10 
+ }],
+ "resto":[{
+   "arosDecebolla":5,
+   "HambureguesasDoble" :{
+    "res":15,
+    "pollo":15,
+    "vegetariana":15
+   },
+    "HamburguesasSimples":{
+    "res":10,
+    "pollo":10,
+    "vegetariana":10
+    },
+    "PapasFritas":5,
+    "agua500ml": 5,
+   "agua750ml":10,
+    "bebidaGaseosa500ml":7,
+    "bebidaGaseosa750ml": 10,
+    "huevo":1,
+    "queso":1
+ }]
+}
