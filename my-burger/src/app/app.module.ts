@@ -11,7 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { InitComponent } from './init/init.component';
 import { DesayunoComponent } from './desayuno/desayuno.component';
 import { RestoComponent } from './resto/resto.component';
-
+import {environment} from '../environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {AngularFireModule} from 'angularfire2';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +30,9 @@ import { RestoComponent } from './resto/resto.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

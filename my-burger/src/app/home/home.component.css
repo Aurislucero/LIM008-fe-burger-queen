@@ -11,3 +11,6 @@
 .large {
     font-size: 4em;
   } */
+  .selected{
+    color: blueviolet;
+  }
