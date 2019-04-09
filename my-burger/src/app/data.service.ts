@@ -11,6 +11,6 @@ export class DataService {
   //   return console.log('clicked');
   // }
   getUsers() {
-    return this.http.get('https://raw.githubusercontent.com/Aurislucero/LIM008-fe-burger-queen/dev/my-burger/datos.json');
+    return this.http.get('https://raw.githubusercontent.com/Aurislucero/LIM008-fe-burger-queen/master/my-burger/src/datos.json');
   }
 }
