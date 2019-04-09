@@ -51,26 +51,32 @@
     "precio":5
    },
    {
+   "img":"",
     "nombre": "agua500ml",
     "precio":5
    },
    {
+   "img":"",
     "nombre": "agua750ml",
     "precio":10
    },
    {
+   "img":"",
     "nombre": "bebidaGaseosa500ml",
     "precio":7
    },
    {
+      "img":"",
     "nombre": "bebidaGaseosa750ml",
     "precio":10
    },
    {
+      "img":"",
     "nombre": "huevo",
     "precio":1
    },
    {
+      "img":"",
     "nombre": "queso",
     "precio":1
    }]

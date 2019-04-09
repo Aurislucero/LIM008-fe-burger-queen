@@ -6,7 +6,7 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                          <img src="assets/img/burger-doble.jpg" width="10px"  class="d-block w-100" alt="...">
+                          <img src="images/img/burger-doble.jpg" width="10px"  class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
                         <img src="../images/jugosnaturales.jpg" class="d-block w-100" alt="...">
@@ -42,26 +42,10 @@
   <h1>Users</h1>
 
 <ul *ngIf="users">
-  <li *ngFor="let user of users.data">
-    <img [src]="user.avatar">
-    <p>{{ user.arosDecebolla }}</p>
+  <li *ngFor="let user of users.desayuno">
+    <img [src]="user.img ">
+    <p>{{ user.nombre }} - {{ user.precio }}</p>
   </li>
 </ul>
 </div>
 
-   <!-- <div class="container">
-        
-        <div class="row">
-            <div class="col-12">
-                    <ul>
-                            <li><img src="../images/burguer_simple.jpg" alt=""><a >café americano-S/5.00</a></li>
-                             <li><img src="../images/cafe-con-leche.jpg" alt=""><a >café con leche-S/7.00</a></li>
-                             <li><img src="../images/sandwich-jamon-queso.jpg" alt=""><a >Sandwich de Jamón y Queso-S/10.00</a></li>
-                             <li><img src="../images/jugosnaturales.jpg" alt=""><a >Jugo de  Frutas Naturales-S/7.00</a></li>
-                         </ul>
-            </div>
-              
-        
-        </div> 
-         
-     </div> -->
