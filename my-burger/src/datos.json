@@ -1,28 +1,77 @@
 {
  "desayuno":[{
-   "cafeAmericano" :5,
-    "cafeConLeche":7,
-    "jugoDeFrutasNatural":7,
-    "sandwichDeJamonYqueso":10 
+  "img":"https://www.cubaneandoconmario.com/wp-content/uploads/2017/01/Caf%C3%A9-americano.jpg",
+   "nombre":"cafeAmericano",
+    "precio":5
+ },
+ {
+  "img":"https://cdn.colombia.com/sdi/2015/03/09/d0b78b47b4404b47a810c615352fbc48.jpg",
+  "nombre":"cafeConLeche",
+   "precio":7
+ },
+ {
+  "img":"https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/05/Recortada/img_lferro_20180705-114137_imagenes_lv_getty_zumos_frutas_variados-183-kmI-U45684272359ZQC-992x558@LaVanguardia-Web.jpg",
+  "nombre":"jugoDeFrutasNatural",
+   "precio":7
+ },
+ {
+  "img":"https://okdiario.com/img/2018/03/18/sandwich-mixto-655x368.jpg",
+  "nombre":"sandwichDeJamonYqueso",
+  "precio":10
  }],
  "resto":[{
-   "arosDecebolla":5,
-   "HambureguesasDoble" :{
-    "res":15,
-    "pollo":15,
-    "vegetariana":15
+    "img":"https://www.mylatinatable.com/wp-content/uploads/2016/01/foto-heroe-1024x693.jpg",
+    "nombre":"arosDecebolla",
+    "precio":5
    },
-    "HamburguesasSimples":{
-    "res":10,
-    "pollo":10,
-    "vegetariana":10
-    },
-    "PapasFritas":5,
-    "agua500ml": 5,
-   "agua750ml":10,
-    "bebidaGaseosa500ml":7,
-    "bebidaGaseosa750ml": 10,
-    "huevo":1,
-    "queso":1
- }]
+   {
+    "img":"https://www.mylatinatable.com/wp-content/uploads/2016/01/foto-heroe-1024x693.jpg",
+    "nombre":"arosDecebolla",
+    "precio":5
+   },
+   {
+    "img":"http://marruzella.es/wp-content/uploads/2017/06/marruzella_burguer_simple.jpg",
+    "nombre":"HamburguesasSimples",
+    "precio":10,
+    "T1": "res",
+    "T2":"pollo",
+    "T3":"vegetariana"
+   },
+   {
+    "img":"https://e.rpp-noticias.io/normal/2016/02/15/265526_80818.jpg",
+    "nombre":"HambureguesasDoble",
+    "precio":15,
+    "T1": "res",
+    "T2":"pollo",
+    "T3":"vegetariana"
+   },
+   {
+    "img":"https://www.ecestaticos.com/imagestatic/clipping/354/165/3541658c01b4c8ab08bc0358648cd161/como-hacer-las-patatas-fritas-perfectas.jpg?mtime=1430831796",
+    "nombre": "PapasFritas",
+    "precio":5
+   },
+   {
+    "nombre": "agua500ml",
+    "precio":5
+   },
+   {
+    "nombre": "agua750ml",
+    "precio":10
+   },
+   {
+    "nombre": "bebidaGaseosa500ml",
+    "precio":7
+   },
+   {
+    "nombre": "bebidaGaseosa750ml",
+    "precio":10
+   },
+   {
+    "nombre": "huevo",
+    "precio":1
+   },
+   {
+    "nombre": "queso",
+    "precio":1
+   }]
 }

@@ -1,16 +1,30 @@
 
-  <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-      
-            <img src="../images/logo-init.png">
-            <h1>BurgerQueen</h1>
-          </div>
-          <div class="col-md-12">
-              <p>Escribe el Nombre del cliente</p> 
-              <input placeholder="escribe aqui" type="text">
+  
+<div class="container init">
+    <div class="row  ">
+        <div class="col-lg-5 m-auto ">
+          <div class="card mt-5 text-body bg-dark">
+             <div class="card-title text-center mt-3 text-white ">
+              <img src="assets/img/logo-init.png"  width="200px" height="200px ">
+              <div class="card mt-5 burger text-white "><h1>BurgerQueen</h1></div>
             </div>
-             <div class="col-md-12"><button><a routerLink="/nav">REALIZAR PEDIDO</a></button></div>
-    </div>
-  </div>
+            <div class="card-body text-center text-white">
+                <h3>Escribe el Nombre del cliente</h3>   
+              <form action="">
+                 <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    </div>
+                    <input type="text" class="form-control py-4" placeholder="Escribe aqui....">
+                 </div>
+                 <button class="btn btn-warning btn-md text-white">
+                    <a routerLink="/desayuno"  class="btn btn-warning btn-md text-white">REALIZAR PEDIDO</a>
+                 </button>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>
+
 
