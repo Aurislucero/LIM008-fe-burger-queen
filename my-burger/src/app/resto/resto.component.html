@@ -30,3 +30,13 @@
     <strong>Name:</strong> 
     <span>{{ messageForm.controls.name.value }}</span>
   </div>
+  <div>
+      <h1>Users</h1>
+    
+    <ul *ngIf="users">
+      <li *ngFor="let user of users.resto">
+        <img [src]="user.img ">
+        <p>{{ user.nombre }} - {{ user.precio }}</p>
+      </li>
+    </ul>
+    </div>
