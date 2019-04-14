@@ -11,13 +11,13 @@
             <div class="card-body text-center text-white">
                 <h3>Escribe el Nombre del cliente</h3>   
               <form action="">
-                 <div class="input-group mb-3">
+                 <div class="input-group mb-3 form-group">
                     <div class="input-group-prepend">
                     </div>
-                    <input type="text" class="form-control py-4" placeholder="Escribe aqui....">
+                    <input class="form-control" #name type="text" class="form-control py-4" placeholder="Escribe aqui....">
                  </div>
-                 <button class="btn btn-warning btn-md text-white">
-                    <a routerLink="/desayuno"  class="btn btn-warning btn-md text-white">REALIZAR PEDIDO</a>
+                 <button class="btn btn-warning btn-md text-white" type="button" >
+                    <a routerLink="/home"  class="btn btn-warning btn-md text-white" (click)="enviarMensaje(name.value)">REALIZAR PEDIDO</a>
                  </button>
               </form>
               

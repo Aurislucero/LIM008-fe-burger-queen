@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirestoreService } from 'src/app/services/firestore/firestore.service';
 
 @Component({
   selector: 'app-nav',
@@ -6,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  appTitle: string = 'myapp';
-  // OR (either will work)
 
-  constructor() { }
+  constructor( private  FirestoreService: FirestoreService ) { }
 
   ngOnInit() {
   }
 
 }
-

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirestoreService } from 'src/app/services/firestore/firestore.service';
 
 @Component({
   selector: 'app-init',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InitComponent implements OnInit {
 
-  constructor() { }
+  constructor( private  firestoreService: FirestoreService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+    enviarMensaje(mensajcliente) {
+      console.log(mensajcliente)
+      this.firestoreService.changeNameValue(mensajcliente);
   }
-
 }
