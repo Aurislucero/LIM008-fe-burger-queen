@@ -63,17 +63,21 @@
         <td >. {{emp.nombre}}</td>
         <td >S/{{emp.precio}}.00</td>
         <td >
-         <div class="btn-group mr-2" role="group" aria-label="First group"><button  type="button" class="btn btn-secondary" (click)="sumar()" >+</button> <h3>{{contador}}</h3> <button type="button" class="btn btn-secondary" (click)="restar()">-</button></div>
-        </td>
+          <div class="btn-group mr-2" role="group" aria-label="First group"><button  type="button" class="btn btn-warning" (click)="sumar()" >+</button> <h3>{{contador}}</h3> <button type="button" class="btn btn-warning" (click)="restar()">-</button></div> </td>
         <td >S/{{emp.precio * contador}}.00</td>
         <td  (click)="deleteList(i)"><a  class="btn text-danger"><i class="fa fa-trash fa-2x"></i></a></td>
-
-      <!-- </tr> -->
-        </tr>
-        <tr>
-          <td>total = S/{{total}}.00</td>
-        </tr>
+        
+      </tr>
+        
     </tbody>
+    <tfoot>
+      <tr class="carrito-total">
+        <td colspan="3"></td>
+        <td>
+          <strong>Total: S/. {{total}} </strong>
+        </td>
+      </tr>
+    </tfoot>
   </table>
 
   <!-- <p *ngFor ="let emp of arrayObject">{{emp.nombre}}</p> -->
