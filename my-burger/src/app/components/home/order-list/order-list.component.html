@@ -50,21 +50,23 @@
 <table class="table table-hover">
     <thead>
       <th>PRODUCTO</th>
-      
-      <th>PRECIO P/U</th>
-     
+           
       <th>CANTIDAD</th>
 
-      <th>PRECIO TOTAL </th>
+      <th>PRECIO P/U</th>
+      <th>PRECIO TOTAL</th>
+      <!-- <th>PRECIO TOTAL </th> -->
       
     </thead>
     <tbody>
       <tr *ngFor ="let emp of arrayObject ; let i=index">
-        <td >. {{emp.nombre}}</td>
-        <td >S/{{emp.precio}}.00</td>
-        <td >
-          <div class="btn-group mr-2" role="group" aria-label="First group"><button  type="button" class="btn btn-warning" (click)="sumar()" >+</button> <h3>{{contador}}</h3> <button type="button" class="btn btn-warning" (click)="restar()">-</button></div> </td>
-        <td >S/{{emp.precio * contador}}.00</td>
+        <td >{{emp.nombre}}</td>
+        <td><input type="number" min="1" max="10" [ngModel]="emp.cantidad"  #counter (keyup)="showList(emp,counter.value)"  ></td>
+        <td >$/{{emp.precio}}.00</td>
+        <td>$/{{emp.subtotal}}.00</td>
+        <!-- <td > -->
+          <!-- <div class="btn-group mr-2" role="group" aria-label="First group"><button  type="button" class="btn btn-warning" (click)="sumar()" >+</button> <h3>{{contador}}</h3> <button type="button" class="btn btn-warning" (click)="restar()">-</button></div> </td> -->
+        <!-- <td >S/{{emp.precio * contador}}.00</td> -->
         <td  (click)="deleteList(i)"><a  class="btn text-danger"><i class="fa fa-trash fa-2x"></i></a></td>
         
       </tr>
@@ -72,9 +74,9 @@
     </tbody>
     <tfoot>
       <tr class="carrito-total">
-        <td colspan="3"></td>
+        <td colspan="2"></td>
         <td>
-          <strong>Total: S/. {{total}} </strong>
+          <strong>Total: {{sumTotal | currency }} </strong>
         </td>
       </tr>
     </tfoot>

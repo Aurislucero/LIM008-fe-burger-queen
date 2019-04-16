@@ -7,10 +7,14 @@ import { summaryFileName } from '@angular/compiler/src/aot/util';
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
+  
   total = 0;
   contador :number = 1;
   nombres : string;
   arrayObject = [];
+  newArrayObject = [];
+  // precio : number;
+
 
   constructor( private  firestoreService: FirestoreService) { 
     this.firestoreService.currentName.subscribe(value=>{
@@ -19,27 +23,38 @@ export class OrderListComponent implements OnInit {
 
     this.firestoreService.currentTable.subscribe(obj=>{
       this.arrayObject = obj;
-      console.log(this.arrayObject);
+      
     })
 
-    this.firestoreService.currentQuantify.subscribe(num=>{
-     this.contador= num;
-    }) 
-    // this.firestoreService.currentQuantify.subscribe(num=>{
-    //   this.total = this.arrayObject.precio * this.contador;
-    //  }) 
+  //   this.firestoreService.currentSaveArray.subscribe(obj=>{
+      
+  //     this.arrayObject=obj;
+     
+       
+      
+     
+  //  })
+    //  this.contador= num;
+    //  this.sumTotal = this.firestoreService.sumTotal() ; 
 
+    //  console.log(this.sumTotal);
+     
+    // }) 
+
+//  sumTotal(){
+
+//  }
+    
    
   }
+  showList( emp,cantidad){
+    this.firestoreService.cantidad(emp,cantidad)
+    
+    
+  }
 
- 
-  sumar(){
-    this.contador= this.contador + 1;
-  }
-  restar(){
-    this.contador= this.contador - 1;
-  }
   ngOnInit() {
   }
+  
 
 }

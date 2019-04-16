@@ -12,7 +12,7 @@ export class OrderComponent implements OnInit {
   
 // private change = new BehaviorSubject([]);
   constructor(public firestoreService: FirestoreService) { }
-
+  desactivado= false;
   ngOnInit() {
     // this.firestoreService.saveOrder().subscribe((men) => {
     //   console.log(men)
@@ -31,8 +31,15 @@ export class OrderComponent implements OnInit {
 
   }
   add(arrayObject){
+    const newObject = {
+      ...arrayObject,
+      cantidad:1,
+    subtotal: arrayObject.precio,
+    }
+
+    this.firestoreService.showNewObject(newObject)
     
-    this.firestoreService.showOrder(arrayObject)
+    
     // console.log(arrayObject);
    
   }
