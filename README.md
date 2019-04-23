@@ -73,6 +73,10 @@ que se puedan ir preparando en orden.
 ![sin titulo](images/P3.PNG)
 ![sin titulo](images/P4.PNG)
 ![sin titulo](images/P5.PNG)
+ ## estructura con componente
+ ![sin titulo](images/co.jpg)
+
+
 
 
 ##### Criterios de aceptación

@@ -18,6 +18,8 @@ export class OrderComponent implements OnInit {
     //   console.log(men)
     // }
   }
+
+  //filtra segun el tipo de menu
   change(tipopedido: string){
     this.firestoreService.getMenu().subscribe((menu) => {
       // console.log(menu)
@@ -30,6 +32,7 @@ export class OrderComponent implements OnInit {
   })
 
   }
+  //la lista del cliente - el pedido final
   add(arrayObject){
     const newObject = {
       ...arrayObject,

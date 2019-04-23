@@ -26,6 +26,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { OrderComponent } from './components/home/order/order.component';
 import { OrderListComponent } from './components/home/order-list/order-list.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -51,7 +52,7 @@ import { OrderListComponent } from './components/home/order-list/order-list.comp
     HttpClientModule,
     AngularFirestoreModule, 
     AngularFireAuthModule, 
-    AngularFireStorageModule, 
+    AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), 
 
   ],
   providers: [],
