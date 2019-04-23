@@ -34,6 +34,7 @@ a la cocina para que se preparen ordenada y eficientemente (a través de un
   _backend_ del que nos darán detalles más adelante).
 
 ![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+![sin titulo](images/init.png)
 
 Esta es la información que tenemos del cliente:
 
@@ -81,6 +82,8 @@ agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
 
 ![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
+
+![inicio](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
 
 ## Objetivos de aprendizaje
 

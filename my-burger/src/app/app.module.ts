@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +28,9 @@ import { OrderComponent } from './components/home/order/order.component';
 import { OrderListComponent } from './components/home/order-list/order-list.component';
 
 
+
 @NgModule({
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
     // NavComponent,
@@ -37,6 +39,7 @@ import { OrderListComponent } from './components/home/order-list/order-list.comp
     NavComponent,
     OrderComponent,
     OrderListComponent
+    
   ],
   imports: [
     BrowserModule,

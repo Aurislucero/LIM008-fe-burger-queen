@@ -8,11 +8,12 @@ import { summaryFileName } from '@angular/compiler/src/aot/util';
 })
 export class OrderListComponent implements OnInit {
   
-  total = 0;
+  public totales:number;
   contador :number = 1;
   nombres : string;
   arrayObject = [];
   newArrayObject = [];
+  // public total: number;
   // precio : number;
 
 
@@ -25,32 +26,28 @@ export class OrderListComponent implements OnInit {
       this.arrayObject = obj;
       
     })
+ 
 
-  //   this.firestoreService.currentSaveArray.subscribe(obj=>{
-      
-  //     this.arrayObject=obj;
-     
-       
-      
-     
-  //  })
-    //  this.contador= num;
-    //  this.sumTotal = this.firestoreService.sumTotal() ; 
+    // este suscribe me trae el total de los subtotales
+   this.firestoreService.currentSumTotal.subscribe(subtotal=>{
+    this.totales=subtotal;
+   })
 
-    //  console.log(this.sumTotal);
-     
-    // }) 
-
-//  sumTotal(){
-
-//  }
+   this.firestoreService.currentDeleteTotal.subscribe(total=>{
+    this.arrayObject = total;
     
-   
+  })
   }
   showList( emp,cantidad){
-    this.firestoreService.cantidad(emp,cantidad)
-    
-    
+    this.firestoreService.cantidad(emp,cantidad) ; 
+  }
+  deleteList(emp){
+    console.log(emp);
+  this.firestoreService.deleteTotal(emp);
+  }
+  savePedido(){
+ this.firestoreService.sendOrder();
+ location.reload();
   }
 
   ngOnInit() {

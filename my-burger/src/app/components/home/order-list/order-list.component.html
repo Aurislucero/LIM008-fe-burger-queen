@@ -1,47 +1,3 @@
-<!-- <div class="form-group col-md-8">
-    <label for="formGroupExampleInput"><strong>Nombre del cliente :</strong> </label>
-    <input type="text" class="form-control"[(ngModel)]="name" placeholder="Cliente"/>
-</div>
-
-<span class="title margin-botton-10"> Pedido
-  <span class="subtitle">({{carrito.length}}) producto(s)</span>  
-</span>
-<div *ngIf="carrito.length>0;else carritovaciotmpl">
-  <table class="table">
-    <caption>Pedido </caption>
-    <thead class="thead-light">
-      <tr>
-        <th class="col">Producto</th>
-        <th class="col">Precio</th>
-        <th class="col">Opciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="well" *ngFor="let item of carrito">
-        <td>{{item.categoria}} {{item.descripcion}}</td>
-        <td>S/. {{item.precio}}</td>
-        <td><button (click)="deleteTodo(carrito)"  class="btn btn-danger"><i  class="fa fa-trash-alt"></i></button></td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr class="carrito-total">
-        <td colspan="1"></td>
-        <td>
-          <strong>Total: S/. {{total}} </strong>
-         
-        </td>
-      </tr>
-    </tfoot>
-  </table>
-</div>
-<button type="button" class="btn btn-success" (click)="guardarPedido(name)" >Guardar <i class="fas fa-save"></i></button>
-
-<ng-template #carritovaciotmpl>
-  <div class="margin-top-20">
-    <strong>El carrito esta vacío.</strong>
-  </div>
-</ng-template> -->
-
 <div class="form-group col-md-8">
     <label for="formGroupExampleInput"><strong>Nombre del cliente :</strong> </label>
     <h1>{{nombres}}</h1>
@@ -62,25 +18,30 @@
       <tr *ngFor ="let emp of arrayObject ; let i=index">
         <td >{{emp.nombre}}</td>
         <td><input type="number" min="1" max="10" [ngModel]="emp.cantidad"  #counter (keyup)="showList(emp,counter.value)"  ></td>
-        <td >$/{{emp.precio}}.00</td>
-        <td>$/{{emp.subtotal}}.00</td>
+        <td >{{emp.precio | currency}}</td>
+        <td>{{emp.subtotal | currency}}</td>
         <!-- <td > -->
           <!-- <div class="btn-group mr-2" role="group" aria-label="First group"><button  type="button" class="btn btn-warning" (click)="sumar()" >+</button> <h3>{{contador}}</h3> <button type="button" class="btn btn-warning" (click)="restar()">-</button></div> </td> -->
         <!-- <td >S/{{emp.precio * contador}}.00</td> -->
-        <td  (click)="deleteList(i)"><a  class="btn text-danger"><i class="fa fa-trash fa-2x"></i></a></td>
-        
+        <td  (click)="deleteList(emp)"><a  class="btn text-danger"><i class="fa fa-trash fa-2x"></i></a></td>
       </tr>
-        
     </tbody>
     <tfoot>
       <tr class="carrito-total">
-        <td colspan="2"></td>
+        <td colspan="3"></td>
         <td>
-          <strong>Total: {{sumTotal | currency }} </strong>
+          <strong>Total: {{totales | currency }} </strong>
         </td>
       </tr>
     </tfoot>
   </table>
+  <div >
+    <button (click)="savePedido()" class="btn btn-dark text-warning"><i class="fas fa-cloud-upload-alt fa-2x"></i> ENVIAR</button>
+  </div>
+    
+      
+   
+
 
   <!-- <p *ngFor ="let emp of arrayObject">{{emp.nombre}}</p> -->
   
