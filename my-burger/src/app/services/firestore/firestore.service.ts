@@ -39,7 +39,7 @@ nombr:string;
 
  private sumTotals = new BehaviorSubject(0);
  currentSumTotal =this.sumTotals.asObservable();
-
+//obtengo el nombre del cliente
  private name = new  BehaviorSubject('') ;
  currentName  = this.name.asObservable();
  
@@ -65,18 +65,20 @@ nombr:string;
   //   this.quantifySource.next(value);
   //   // console.log(value)
   // }
-   
+
+  // obtengo el nombre del cliente
+  changeNameValue(nombre){
+    this.nameUser = nombre;
+    this.name.next(nombre);
+  }
+   //obtengo el menu segun el filtro
   getMenu() {
     return this.firestore.collection('menu').valueChanges();
   }
   
     
-  // obtengo el nombre
-  changeNameValue(nombre){
-    this.nameUser = nombre;
-    this.name.next(nombre);
-  }
-
+  
+//muestra el array de objetos de los pedidos
   showNewObject(arrayObject){
     this.producto.push(arrayObject);
     this.tablaPedido.next(this.producto);

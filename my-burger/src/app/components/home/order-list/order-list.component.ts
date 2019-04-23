@@ -7,51 +7,51 @@ import { summaryFileName } from '@angular/compiler/src/aot/util';
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
-  
-  public totales:number;
-  contador :number = 1;
-  nombres : string;
+
+  public totales: number;
+  contador: number = 1;
+  nombres: string;
   arrayObject = [];
   newArrayObject = [];
   // public total: number;
   // precio : number;
 
 
-  constructor( private  firestoreService: FirestoreService) { 
-    this.firestoreService.currentName.subscribe(value=>{
-      this.nombres=value;
+  constructor(private firestoreService: FirestoreService) {
+    this.firestoreService.currentName.subscribe(value => {
+      this.nombres = value;
     })
 
-    this.firestoreService.currentTable.subscribe(obj=>{
+    this.firestoreService.currentTable.subscribe(obj => {
       this.arrayObject = obj;
-      
+
     })
- 
+
 
     // este suscribe me trae el total de los subtotales
-   this.firestoreService.currentSumTotal.subscribe(subtotal=>{
-    this.totales=subtotal;
-   })
+    this.firestoreService.currentSumTotal.subscribe(subtotal => {
+      this.totales = subtotal;
+    })
 
-   this.firestoreService.currentDeleteTotal.subscribe(total=>{
-    this.arrayObject = total;
-    
-  })
+    this.firestoreService.currentDeleteTotal.subscribe(total => {
+      this.arrayObject = total;
+
+    })
   }
-  showList( emp,cantidad){
-    this.firestoreService.cantidad(emp,cantidad) ; 
+  showList(emp, cantidad) {
+    this.firestoreService.cantidad(emp, cantidad);
   }
-  deleteList(emp){
+  deleteList(emp) {
     console.log(emp);
-  this.firestoreService.deleteTotal(emp);
+    this.firestoreService.deleteTotal(emp);
   }
-  savePedido(){
- this.firestoreService.sendOrder();
- location.reload();
+  savePedido() {
+    this.firestoreService.sendOrder();
+    location.reload();
   }
 
   ngOnInit() {
   }
-  
+
 
 }
