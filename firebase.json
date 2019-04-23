@@ -9,7 +9,7 @@
     ]
   },
   "hosting": {
-    "public": "my-burger/dist/my-burger/",
+    "public": "my-burger/dist/my-burger",
     "ignore": [
       "firebase.json",
       "**/.*",
